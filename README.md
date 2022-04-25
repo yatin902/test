@@ -1,4 +1,4 @@
-# BloXmove Dev : Claims / Credential Exchange
+# BloXmove Dev : Claims / Credential Exchange 
 
 BloXmove generally uses a 1-step process when requesting an action, e.g. when requesting a rental.
 
