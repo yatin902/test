@@ -21,62 +21,16 @@ It is assumed that the configuration of the component using the asset service (e
 | addInvolvedParties(assetDID, involvedPartiesDIDs, permissions) addInvolvedPartiesByPublicKey(assetDID, involvedPartiesPublicKeys, permissions) | DID method of current account, asset and involved party must be the same, uses network according to this DID method New variant to add involved parties based on their public key Interface of permissions attribute is extended to contain different attributes of the DID document the involved party is added to (e.g. publicKey, authentication, controller, `recovery) | 3 |
 | getInvolvedParties(assetDID) → DIDs getOwner(assetDID) → DID getDataProperty(assetDID, key, assetType?) → string | Uses network according to DID method of asset DID | 3 |
 | createDataProperty(assetDID, key, value, assetType?, changable?) updateDataProperty(assetDID, key, value, assetType?) | DID method of current account and asset must be the same, uses network according to this DID method | 3
- |
-| getAttestations(assetDID, topic) → list of attestation objects | Uses network according to DID method of asset DID | 1* |
-| setAttestation(assetDID, topic, externalVC) | DID method of current account and asset must be the same, this determines the network where the attestation is stored | 3 |
+ | getAttestations(assetDID, topic) → list of attestation objects | Uses network according to DID method of asset DID | 1* |
+| setAttestation(assetDID, topic, externalVC) | DID method of current account and asset must be the same, this determines the network where the attestation is stored | 3 | resolveName(name) → DID setName(name, assetDID) | Uses a global name service or namespace defined and governed by the Mobility Blockchain Platform that supports arbitrary name ↔︎ DID mappings, could be even made off-chain or permissioned for data privacy reasons | 3 |
+| verifySignature(signerDID, message, signature) → boolean | Uses (default) signature method based on signer DID | 1 |
+| signMessage(message) → string | Uses (default) signature and DID method of current account | 1 |
+| isValidDID(assetDID) → boolean <br> getDIDDocument(assetDID) → JSON <br> setDIDDocument(didDocument) | Uses network according to DID method of asset DID | 2 | 
+| createVerifiableCredential(type, credentialSubject, expirationDate?, proofPurpose?) → VC \| string \| createVerifiablePresentation(VC[] \| string[], expirationDate?, proofPurpose?) → VP \| string | Uses DID method of current account for the signer of the VC or VP, must support both JSON-LD (object) or JWT (string) VC and VP formats | 1 |
+| isVerifiablePresentationValid(signerDID, VP) → boolean | Removed in favor of validateVerifiablePresentation (see below) | 1 |
+| validateVerifiableCredential(VC \| string) → VC \| null | Validates the VC (can be both JSON-LD or JWT format) in terms of expiration, signature, and returns the VC object if the information is valid | 1 |
+| validateVerifiablePresentation(VP \| string, expectedSignerDID) → VC[] | Validates the VP (can be both JSON-LD or JWT format) in terms of expiration and signatures, returns list of contained VC objects if valid | 1 |
 
-resolveName(name) → DID
-setName(name, assetDID)
-
-Uses a global name service or namespace defined and governed by the Mobility Blockchain Platform that supports arbitrary name ↔︎ DID mappings, could be even made off-chain or permissioned for data privacy reasons
-
-3
-
-verifySignature(signerDID, message, signature) → boolean
-
-Uses (default) signature method based on signer DID
-
-1
-
-signMessage(message) → string
-
-Uses (default) signature and DID method of current account
-
-1
-
-isValidDID(assetDID) → boolean
-getDIDDocument(assetDID) → JSON
-setDIDDocument(didDocument)
-
-Uses network according to DID method of asset DID
-
-2
-
-createVerifiableCredential(type, credentialSubject, expirationDate?, proofPurpose?) → VC | string
-createVerifiablePresentation(VC[] | string[], expirationDate?, proofPurpose?) → VP | string
-
-Uses DID method of current account for the signer of the VC or VP, must support both JSON-LD (object) or JWT (string) VC and VP formats
-
-1
-
-isVerifiablePresentationValid(signerDID, VP) → boolean
-
-Removed in favor of validateVerifiablePresentation (see below)
-
-1
-
-validateVerifiableCredential(VC | string) → VC | null
-
-Validates the VC (can be both JSON-LD or JWT format) in terms of expiration, signature, and returns the VC object if the information is valid
-
-1
-
-validateVerifiablePresentation(VP | string, expectedSignerDID) → VC[]
-
-Validates the VP (can be both JSON-LD or JWT format) in terms of expiration and signatures, returns list of contained VC objects if valid
-
-1
-
-*priority only relates to the Ethereum network
+***priority only relates to the Ethereum network**
 
 All priority 1 elements have been implemented as part of the moveX@ONT scenario for the Startup Autobahn Expo Day in September 2020. Priority 2 and 3 elements are implemented in the Universal Asset Service, but mostly missing the implementation in the Ontology Asset Service and thus would not work if called for an ONT DID.
