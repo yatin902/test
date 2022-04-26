@@ -3,7 +3,7 @@
  - Architecture Overview
    1. [Core mechanisms](README2.md)
    2. [Generalized Contracting Flow](README3.md)
-   3. [aims / Credential Exchange](/README4md)
+   3. [aims / Credential Exchange](/README4.md)
    4. [Verifiable Credential / Verifiable Presentation](README5.md)
    5. [Use of BBS+ signatures](README6.md)
    6. [Car access mechanisms](README7.md)
