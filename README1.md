@@ -1,7 +1,7 @@
 ![This is an image](https://github.com/yatin902/test/blob/main/bloxmove_colour.png)
 # Available Pages
  - Architecture Overview
-   1. Core mechanisms
+   1. [Core mechanisms](src/README2.md)
    2. Generalized Contracting Flow
    3. Claims / Credential Exchange
    4. Verifiable Credential / Verifiable Presentation
