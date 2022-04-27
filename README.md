@@ -3,7 +3,7 @@
  - Architecture Overview
    1. [Core mechanisms](https://github.com/yatin902/test/blob/main/Markdown/Technical%20Documentation/Architecture%20Overview/Core-mechanisms_1593933450.md)
    2. [Generalized Contracting Flow](https://github.com/yatin902/test/blob/main/Markdown/Technical%20Documentation/Architecture%20Overview/Generalized-Contracting-Flow_1575616272.md)
-   3. [aims / Credential Exchange](/README4.md)
+   3. [Claims / Credential Exchange](/README4.md)
    4. [Verifiable Credential / Verifiable Presentation](README5.md)
    5. [Use of BBS+ signatures](README6.md)
    6. [Car access mechanisms](README7.md)
