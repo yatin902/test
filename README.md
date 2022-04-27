@@ -10,7 +10,8 @@
    7. [Settlement Process](/Markdown/Technical%20Documentation/Architecture%20Overview/Settlement-Process_1555201666.md)
    8. [Business Process Modeling and Engine](README9.md)
    9. [Safe Storage Module](/Markdown/Technical%20Documentation/Architecture%20Overview/Safe-Storage-Module_1812299375.md)
-   10. [Usage of Verifiable Credentials](/Markdown/Technical%20Documentation/Architecture%20Overview/README11.md)
+   10. [Usage of Verifiable Credentials](/Markdown/Technical%20Documentation/Architecture%20Overview/Usage-of-Verifiable-Credentials_2113502825.md
+)
    11. [Universal Asset Service](README12.md)
    12. [Vehicle Integration and Management](README13.md)
    13. [bloXmove Protocol Integration Scenarios](README14.md)
