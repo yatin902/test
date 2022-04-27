@@ -1,6 +1,8 @@
 # BloXmove Dev : Usage of Verifiable Credentials
-Attestations in the MBP basic business architecture can be represented by off-chain verifiable credentials according to the W3C specification, especially when their content contains sensitive information that should not be visible on a ledger.
+Attestations in the MBP basic business architecture can be represented by off-chain verifiable credentials according to the [W3C specification](https://www.w3.org/TR/vc-data-model/), especially when their content contains sensitive information that should not be visible on a ledger.
+
 The following describes the technical flows of verifiable credential issuance and validation, using the example of user claims (driverLicense, minAge) that a service consumer gets attested by a KYC Provider and presents it to the Fleet Node for proving to fulfil the requirements to rent a car.
+ 
 ![This is an image](https://github.com/yatin902/test/blob/main/2113502825/2141486701%20(1).png?raw=true)
 
 ## Issuance: User gets Verifiable Credential(s) from KYC Provider
@@ -40,6 +42,7 @@ A VC returned could look like the following (using ethr for the DIDs):
 
 ## Validation: Fleet Node validates claims
 The flow above assumes that the Fleet Node is configured with a list of trusted issuer DIDs, i.e. the ids of KYC Services or Id Providers the Fleet Operator trusts.
+
 The validation is done as part of a user request, e.g. the F2S app requesting the rental of a car. In the payload of this request the F2S app passes on a Verifiable Presentation of the previously received VCs signed by the private/public key pair that belongs to the user DID. The Verifiable Presentation could look like the example below.
 ```javascript
 {
@@ -68,6 +71,7 @@ The Fleet Node validates the information in the following way:
 - Resolve user DID, validate existence of user DID and user signature in proof of Verifiable Presentation
 - For each of the VCs, resolve the issuer DID, validate existence of issuer DID and issuer signature in proof of VC
 - (Optional in case of revocation): For each of the VCs, check the Credential Registry Contract for the status, validate it has the expected status
+
 If one of the checks or validations fails, the Fleet Node should reject the request.
 
 ## DID Resolver and Credential Registry Contract
