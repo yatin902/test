@@ -36,6 +36,6 @@ As a next step, Zeebe should be further explored in practice with a real use cas
 
 | File | Description | Date | Authors |
 | -----| ----------- | ---- | ------- |
-| ![This is an image](1656159887/2047147625.jpg) | Excel List of process steps for vehicle rental and vehicle registrations | 2020-07-28 | Jan-Paul Buchwald (Unlicensed) |
-| ![This is an image](https://raw.githubusercontent.com/yatin902/test/main/1656159887/2295791209.png) | The Fleet Backend should not be (as possible as it can be) not be change when integrating the BPMN Engine, to save efforts and reusability for other workflow and workers. A Facade Services that can contain one or more few calls to BPMN services is necessary to make it compact and business focus services. | 2020-10-29 | david batalla (Unlicensed) |
+| ![This is an image](1656159887/2047147625.jpg) | Excel List of process steps for vehicle rental and vehicle registrations | 2020-07-28 | [Jan-Paul Buchwald (Unlicensed)](https://bloxmove.atlassian.net/wiki/people/5a50d761e067544f89dbeeb1?ref=confluence) |
+| ![This is an image](https://raw.githubusercontent.com/yatin902/test/main/1656159887/2295791209.png) | The Fleet Backend should not be (as possible as it can be) not be change when integrating the BPMN Engine, to save efforts and reusability for other workflow and workers. A Facade Services that can contain one or more few calls to BPMN services is necessary to make it compact and business focus services. | 2020-10-29 | [david batalla (Unlicensed)](https://bloxmove.atlassian.net/wiki/people/557058:7f3b2055-058a-4f86-85ad-d96a999d85a4?ref=confluence) |
 
