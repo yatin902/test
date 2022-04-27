@@ -5,8 +5,11 @@ The following describes the technical flows of verifiable credential issuance an
 
 ## Issuance: User gets Verifiable Credential(s) from KYC Provider
 The flow above assumes the user already has a private/public key pair and associated DID in the Fleet2Share (F2S) app. The F2S App triggers a request to get verifications from the Sample KYC Service, passing on the user DID, some proof data about the claims, and a signature by the private/public key pair that is associated to the user DID. The Sample KYC Service resolves the user DID to validate it exists and retrieve the public key(s) authorised to sign on behalf of this DID. With that information, the Sample KYC Service can validate the signature.
+
 After successfully validating the real-world proofs, the Sample KYC Service creates the Verifiable Credentials and adds a proof signed with a private/public key pair that belongs to the DID of the KYC Provider. Every VC gets a unique identifier and can be optionally “anchored” in a Credential Registry Contract on the blockchain, which typically stores the unique identifier along with the issuer identity and the credential status information. The issuer can then later update the status of the credential and thus revoke it.
+
 The VCs are returned to the F2S app, where they are stored in the wallet.
+
 A VC returned could look like the following (using ethr for the DIDs):
 
 ```javascript
