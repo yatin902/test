@@ -1,17 +1,22 @@
 # BloXmove Dev : Universal Asset Service
 ## Using ONT ID for Service Consumer, Ethr DIDs for Other Components
 The following assumes a scenario where the user / consumer of the rental service has an ONT Id, and all other entities Fleet Owner (with the Fleet Node backend service acting on its behalf), Vehicle, and Rental Contract are using Ethr DIDs. Further assumed is that the user uses a mobile app where the private key and certain VCs of its ONT Id are already stored, e.g. the Welcome Home App or a more general wallet app like ONTO.
+
 The basic onboarding flow is then handled in the frontend generating a new ONT private/public key pair in the Fleet2Share app, then jumping to an ONT App to ask the new public key to be added to the existing ONT ID and the VCs to be returned to the Fleet2Share app, where the ONT ID and VCs are stored for later usage.
+
 ![This is an image](https://raw.githubusercontent.com/yatin902/test/main/2234351276/4498260048.png)
 
 ![This is an image](https://raw.githubusercontent.com/yatin902/test/main/2234351276/4498227256.jpg)
 
 After the initial onboarding, the F2S App uses the ONT ID to request a rental, presenting the claims in a Verifiable Presentation to the Fleet Node. Using the Universal Asset Service, the Fleet Node recognises that the consumer uses an ONT ID and does the necessary validations and checks towards the ONT Network. The rental contract is handled on the Ethereum Network as the layer 1 of the service provider. When it gets to confirming the contract by the user, the F2S App creates a VC with the contract DID and the topic “consumerConfirm” as the subject issued by the ONT ID. This VC is then sent to the Fleet Node and stored as an attestation on the Ethereum Network Attestation Registry Smart Contract.
+
 The same way, the remaining parts of the rental process are handled, with the F2S App always using the ONT ID for consumer confirmations or signatures, and the Fleet Node and Virtual Car Wallet recognising the ONT related DID based on the Universal Asset Service implementation.
 
 ## Asset Service Interface
 The current asset service TypeScript definition can be found in GitHub: https://github.com/bloxmove-com/did-asset-library/blob/master/src/services/asset.service.ts
+
 The following table lists the current operations and provides a basic specification how a support of multiple/different DID methods should be achieved.
+
 It is assumed that the configuration of the component using the asset service (e.g. a backend service) must point to a particular account and DID, thus defining which DID method and related ledger network the “current account” uses.
 
 | Operation | Specification | Prio |
