@@ -6,7 +6,7 @@ The bloXmove platform should provide a pluggable, flexible settlement mechanism 
 The business logic orchestrates calls to an abstract Settlement Service (library) at relevant parts of the flow and connects the settlement information to the asset layer by storing references in both ways. A particular smartVIN implementation of the Settlement Service would dispatch the calls to the respective operations on a smartVIN node.
 
 ### Schema
-![This is an image](1554874007.png)
+![This is an image](attachments/1554874007.png)
 #### Pros
 
 - Settlement information is pushed in realtime
@@ -29,7 +29,7 @@ Rather than implementing and integrating the Settlement Service as a (synchronou
 The business logic only takes care of the transactions in the asset layer which provide a traceable record of all activities relevant for later settlement. An independent Settlement Agent regularly or upon explicit trigger fetches all required information from the asset layer, calculates the liabilities from that information, stores the liabilities in the settlement system, and sets references to the settlement transactions in the asset layer. A particular smartVIN implementation of the Settlement Agent would dispatch the calls to the respective operations on a smartVIN node.
 
 ### Schema
-![This is an image](1555889771.png)
+![This is an image](attachments/1555889771.png)
 
 #### Pros
 
@@ -54,7 +54,7 @@ Number 1 has the advantage of possible re-use across components, but the disadva
 Business Logic and settlement are completely separated components associated to a ledger (e.g. contract flow to the Evan ledger, settlement to the smartVIN/Corda ledger). The connection between the two spheres is established on the ledger level by exchanging core business facts in a standardized format (e.g. modelled as non-fungible tokens) using an interledger protocol like Cosmos. In the simple case the ledgers are connected through direct bilateral connections, in advanced scenarios an additional interledger network like Cosmos Hub can be used to connect more than two ledgers.
 
 ### Schema
-![This is an image](1656389233.png)
+![This is an image](attachments/1656389233.png)
 #### Pros
 
 - Maximum decoupling between business logic and settlement

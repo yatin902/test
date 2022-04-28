@@ -1,4 +1,4 @@
-![This is an image](bloxmove_colour.png)
+![This is an image](attachments/bloxmove_colour.png)
 # Available Pages
  - [Architecture Overview](Architecture-Overview_4492492808.md)
    1. [Core mechanisms](Core-mechanisms_1593933450.md)

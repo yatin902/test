@@ -12,7 +12,7 @@ Based on the asset and attestation concept described in the [Core mechanisms](Ma
 
 
 The flow and attestations are depicted in the following diagram:
-![This is an image](1575780026.png)
+![This is an image](attachments/1575780026.png)
 
 ### Contract creation and start
 1. _Consumer_ requests a contract indicating the service it wants to book and its consumer DID
@@ -50,7 +50,7 @@ With all above required attestations in place, the contract is confirmed and act
 ## Combining Contracts
 This generalised flow of a contract start and end can now be applied in many different scenarios, including combinations of contracts in various ways, e.g. in a B2C + B2B backfill scenario as the following:
 
-![This is an image](1575616300.png)
+![This is an image](attachments/1575616300.png)
 
 
 - User A requests a contract from _MSP B_, resulting in _Contract A ↔︎ B_ with User A as the Consumer and _MSP B _as the Provider.
