@@ -1,6 +1,6 @@
 ![This is an image](bloxmove_colour.png)
 # Available Pages
- - Architecture Overview
+ - [Architecture Overview](Architecture-Overview_4492492808.md)
    1. [Core mechanisms](Core-mechanisms_1593933450.md)
    2. [Generalized Contracting Flow](Generalized-Contracting-Flow_1575616272.md)
    3. [Claims / Credential Exchange](4493869070.md)

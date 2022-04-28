@@ -9,4 +9,4 @@ information
 
 Source pptx file:
 
-<span class="confluence-embedded-file-wrapper">[![](4492492808/4492591105)]</span>
+<span class="confluence-embedded-file-wrapper">![](4492492808/4492591105)</span>
