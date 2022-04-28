@@ -4,9 +4,9 @@ The following assumes a scenario where the user / consumer of the rental service
 
 The basic onboarding flow is then handled in the frontend generating a new ONT private/public key pair in the Fleet2Share app, then jumping to an ONT App to ask the new public key to be added to the existing ONT ID and the VCs to be returned to the Fleet2Share app, where the ONT ID and VCs are stored for later usage.
 
-![This is an image](https://raw.githubusercontent.com/yatin902/test/main/2234351276/4498260048.png)
+![This is an image](2234351276/4498260048.png)
 
-![This is an image](https://raw.githubusercontent.com/yatin902/test/main/2234351276/4498227256.jpg)
+![This is an image](2234351276/4498227256.jpg)
 
 After the initial onboarding, the F2S App uses the ONT ID to request a rental, presenting the claims in a Verifiable Presentation to the Fleet Node. Using the Universal Asset Service, the Fleet Node recognises that the consumer uses an ONT ID and does the necessary validations and checks towards the ONT Network. The rental contract is handled on the Ethereum Network as the layer 1 of the service provider. When it gets to confirming the contract by the user, the F2S App creates a VC with the contract DID and the topic “consumerConfirm” as the subject issued by the ONT ID. This VC is then sent to the Fleet Node and stored as an attestation on the Ethereum Network Attestation Registry Smart Contract.
 

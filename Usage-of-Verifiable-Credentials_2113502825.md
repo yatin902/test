@@ -4,7 +4,7 @@ Attestations in the MBP basic business architecture can be represented by off-ch
 
 The following describes the technical flows of verifiable credential issuance and validation, using the example of user claims (driverLicense, minAge) that a service consumer gets attested by a KYC Provider and presents it to the Fleet Node for proving to fulfil the requirements to rent a car.
  
-![This is an image](https://github.com/yatin902/test/blob/main/2113502825/2141486701%20(1).png?raw=true)
+![This is an image](2113502825/2141486701%20(1).png?raw=true)
 
 ## Issuance: User gets Verifiable Credential(s) from KYC Provider
 The flow above assumes the user already has a private/public key pair and associated DID in the Fleet2Share (F2S) app. The F2S App triggers a request to get verifications from the Sample KYC Service, passing on the user DID, some proof data about the claims, and a signature by the private/public key pair that is associated to the user DID. The Sample KYC Service resolves the user DID to validate it exists and retrieve the public key(s) authorised to sign on behalf of this DID. With that information, the Sample KYC Service can validate the signature.
